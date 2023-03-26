@@ -1,12 +1,8 @@
 import json
-import os
-import re
-from pprint import pprint as pp  # noqa
-import uuid
+from pprint import pprint as pp
 
 from anki.hooks import addHook
 from aqt.qt import *
-from aqt.utils import tooltip, restoreGeom, saveGeom, showInfo
 from aqt import mw
 
 addon_path = os.path.dirname(__file__)
@@ -43,7 +39,3 @@ def setupEditorButtonsFilter(buttons, editor):
     return buttons
 
 addHook("setupEditorButtons", setupEditorButtonsFilter)
-
-my_string = "hello world"
-if my_string.startswith("hello"):
-    print("The string starts with 'hello'")
